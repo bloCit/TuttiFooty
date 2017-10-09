@@ -3,6 +3,7 @@ var Header = require('./header');
 var Title = require('./title');
 var Techs = require('./techs/techs');
 var Footer = require('./footer');
+var Menu = require('./menu');
 
 var styles = {
   container: {
@@ -23,6 +24,7 @@ module.exports = React.createClass({
       <div style={styles.container}>
         <Header/>
         <main style={styles.main}>
+          <Menu/>
           <Title/>
           <Techs/>
         </main>
