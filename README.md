@@ -8,4 +8,5 @@
 ## Visual Studio Code mit GitHub verbinden
 
 git remote add pb git://github.com/bloCit/TuttiFooty.git
+
 git push -f --set-upstream https://github.com/bloCit/TuttiFooty  master:master
