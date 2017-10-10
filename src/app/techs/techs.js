@@ -37,7 +37,7 @@ export class Techs extends Component {
     return (
       <div style={styles.container}>
         <h2 style={styles.h2}>
-          Cooked with all these awesome technologies:
+          Here comes the booom!
         </h2>
         <div style={styles.techs}>
           {this.state.techs.map((tech, i) => (

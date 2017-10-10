@@ -9,7 +9,8 @@ const styles = {
   title: {
     flex: 1,
     fontSize: '1.5rem',
-    margin: '1rem'
+    margin: '1rem',
+    color: 'white'
   },
   date: {
     flex: 1,
@@ -24,12 +25,10 @@ export class Header extends Component {
     return (
       <header style={styles.header}>
         <p style={styles.title}>
-          <a href="https://github.com/FountainJS/generator-fountain-webapp" target="_blank" rel="noopener noreferrer">
-            Fountain Generator
-          </a>
+          
         </p>
         <p style={styles.date}>
-          Generated with FountainJS v1.0.0 on Tue Oct 10 2017 11:30:01 GMT+0200 (Mitteleuropäische Sommerzeit)
+          Developed from genius guys
         </p>
       </header>
     );
