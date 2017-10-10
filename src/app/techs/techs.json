@@ -28,11 +28,11 @@
     "text2": "It extends the CSS language by adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themable and extendable."
   },
   {
-    "key": "js",
-    "title": "JavaScript",
-    "logo": "http://fountainjs.io/assets/imgs/js.png",
-    "text1": "A high-level, dynamic, untyped, and interpreted programming language.",
-    "text2": "A prototype-based with first-class functions, making it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles."
+    "key": "babel",
+    "title": "Babel",
+    "logo": "http://fountainjs.io/assets/imgs/babel.png",
+    "text1": "Babel is a JavaScript compiler",
+    "text2": "Use next generation JavaScript, today"
   },
   {
     "key": "eslint",

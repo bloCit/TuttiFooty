@@ -1,6 +1,6 @@
-var React = require('react');
+import React, {Component} from 'react';
 
-var styles = {
+const styles = {
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -19,8 +19,8 @@ var styles = {
   }
 };
 
-module.exports = React.createClass({
-  render: function () {
+export class Header extends Component {
+  render() {
     return (
       <header style={styles.header}>
         <p style={styles.title}>
@@ -29,9 +29,9 @@ module.exports = React.createClass({
           </a>
         </p>
         <p style={styles.date}>
-          Generated with FountainJS v1.0.0 on Mon Oct 09 2017 20:04:17 GMT+0200 (Mitteleuropäische Sommerzeit)
+          Generated with FountainJS v1.0.0 on Tue Oct 10 2017 11:30:01 GMT+0200 (Mitteleuropäische Sommerzeit)
         </p>
       </header>
     );
   }
-});
+}

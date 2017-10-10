@@ -1,6 +1,6 @@
-var React = require('react');
+import React, {Component} from 'react';
 
-var styles = {
+const styles = {
   tech: {
     height: '15rem',
     width: '15rem',
@@ -21,12 +21,8 @@ var styles = {
   }
 };
 
-module.exports = React.createClass({
-  propTypes: {
-    tech: React.PropTypes.object.isRequired
-  },
-
-  render: function () {
+export class Tech extends Component {
+  render() {
     return (
       <div style={styles.tech}>
         <img style={styles.logo} src={this.props.tech.logo}/>
@@ -38,4 +34,8 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+Tech.propTypes = {
+  tech: React.PropTypes.object.isRequired
+};
