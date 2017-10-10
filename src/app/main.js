@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
 import {Header} from './header';
 import {Title} from './title';
+import {About} from './about';
 import {Techs} from './techs/techs';
 import {Footer} from './footer';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 
 const styles = {
@@ -24,9 +30,17 @@ export class Main extends Component {
       <div style={styles.container}>
         <Header/>
         <main style={styles.main}>
-          <Menu/>
-          <Title/>
-          <Techs/>
+        <Router>
+        <div>
+          <ul>
+            <li><Link to="/about">About</Link></li>
+          </ul>
+    
+          <hr/>
+    
+          <Route path="/about" component={About}/>
+        </div>
+      </Router>
         </main>
         <Footer/>
       </div>
