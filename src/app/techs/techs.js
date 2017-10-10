@@ -36,9 +36,6 @@ export class Techs extends Component {
   render() {
     return (
       <div style={styles.container}>
-        <h2 style={styles.h2}>
-          Here comes the booom!
-        </h2>
         <div style={styles.techs}>
           {this.state.techs.map((tech, i) => (
             <Tech key={i} tech={tech}/>

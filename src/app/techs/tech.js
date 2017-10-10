@@ -24,7 +24,7 @@ const styles = {
 export class Tech extends Component {
   render() {
     return (
-      <div style={styles.tech}>
+      <div className='tech' style={styles.tech}>
         <img style={styles.logo} src={this.props.tech.logo}/>
         <h3 style={styles.h3}>
           {this.props.tech.title}

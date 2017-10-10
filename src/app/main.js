@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Header} from './header';
 import {Title} from './title';
+import {Home} from './home';
 import {About} from './about';
 import {Techs} from './techs/techs';
 import {Footer} from './footer';
@@ -33,11 +34,13 @@ export class Main extends Component {
         <Router>
         <div>
           <ul>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
           </ul>
     
           <hr/>
     
+          <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
         </div>
       </Router>
