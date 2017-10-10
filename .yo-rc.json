@@ -4,14 +4,14 @@
     "props": {
       "framework": "react",
       "modules": "webpack",
-      "js": "js",
+      "js": "babel",
       "ci": "",
       "css": "less",
-      "resolved": "C:\\Users\\Claudio\\AppData\\Roaming\\npm\\node_modules\\generator-fountain-webapp\\node_modules\\generator-fountain-react\\generators\\app\\index.js",
+      "resolved": "C:\\Users\\grake\\AppData\\Roaming\\npm\\node_modules\\generator-fountain-webapp\\node_modules\\generator-fountain-react\\generators\\app\\index.js",
       "namespace": "fountain-react:app",
       "_": [],
       "sample": "techs",
-      "router": "none"
+      "router": "router"
     }
   }
 }

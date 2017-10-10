@@ -1,7 +1,7 @@
-/* eslint linebreak-style: ["error", "windows"] */
+import React, {Component} from 'react';
 
-var React = require('react');
-var styles = {
+const styles = {
+
   header: {
     display: 'flex',
     alignItems: 'center'
@@ -9,7 +9,8 @@ var styles = {
   title: {
     flex: 1,
     fontSize: '1.5rem',
-    margin: '1rem'
+    margin: '1rem',
+    color: 'white'
   },
   date: {
     flex: 1,
@@ -19,16 +20,17 @@ var styles = {
   }
 };
 
-module.exports = React.createClass({
-  render: function () {
+export class Header extends Component {
+  render() {
     return (
       <header style={styles.header}>
         <p style={styles.title}>
-          <a href="https://github.com/FountainJS/generator-fountain-webapp" target="_blank" rel="noopener noreferrer">
-            TuttiFooty
-          </a>
+        
+        </p>
+        <p style={styles.date}>
+          Developed from genius guys
         </p>
       </header>
     );
   }
-});
+}

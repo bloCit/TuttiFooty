@@ -1,11 +1,11 @@
-var React = require('react');
-var Header = require('./header');
-var Title = require('./title');
-var Techs = require('./techs/techs');
-var Footer = require('./footer');
-var Menu = require('./menu');
+import React, {Component} from 'react';
+import {Header} from './header';
+import {Title} from './title';
+import {Techs} from './techs/techs';
+import {Footer} from './footer';
 
-var styles = {
+
+const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -18,8 +18,8 @@ var styles = {
   }
 };
 
-module.exports = React.createClass({
-  render: function () {
+export class Main extends Component {
+  render() {
     return (
       <div style={styles.container}>
         <Header/>
@@ -32,4 +32,4 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}

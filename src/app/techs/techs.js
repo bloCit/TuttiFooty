@@ -1,8 +1,9 @@
-var React = require('react');
-var axios = require('axios');
-var Tech = require('./tech');
+import React, {Component} from 'react';
+import axios from 'axios';
 
-var styles = {
+import {Tech} from './tech';
+
+const styles = {
   container: {
     margin: '1rem'
   },
@@ -18,31 +19,32 @@ var styles = {
   }
 };
 
-module.exports = React.createClass({
-  getInitialState: function () {
-    return {techs: []};
-  },
+export class Techs extends Component {
+  constructor() {
+    super();
+    this.state = {techs: []};
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
     axios
       .get('app/techs/techs.json')
-      .then(function (response) {
+      .then(response => {
         this.setState({techs: response.data});
-      }.bind(this));
-  },
+      });
+  }
 
-  render: function () {
+  render() {
     return (
       <div style={styles.container}>
         <h2 style={styles.h2}>
-          Cooked with all these awesome technologies:
+          Here comes the booom!
         </h2>
         <div style={styles.techs}>
-          {this.state.techs.map(function (tech, i) {
-            return <Tech key={i} tech={tech}/>;
-          })}
+          {this.state.techs.map((tech, i) => (
+            <Tech key={i} tech={tech}/>
+          ))}
         </div>
       </div>
     );
   }
-});
+}

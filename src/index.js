@@ -1,13 +1,16 @@
-require('babel-polyfill');
+import 'babel-polyfill';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Router, Route, browserHistory} from 'react-router';
 
-var Main = require('./app/main');
+import {Main} from './app/main';
 
-require('./index.less');
+import './index.less';
 
 ReactDOM.render(
-  <Main/>,
+  <Router history={browserHistory}>
+    <Route path="/" component={Main}/>
+  </Router>,
   document.getElementById('root')
 );

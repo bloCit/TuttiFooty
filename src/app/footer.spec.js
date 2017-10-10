@@ -1,17 +1,15 @@
 /* eslint "react/no-find-dom-node": "off" */
 
-'use strict';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TestUtils from 'react-addons-test-utils';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var TestUtils = require('react-addons-test-utils');
+import {Footer} from './footer';
 
-var Footer = require('./footer');
-
-describe('Footer', function () {
-  it('should be a footer', function () {
-    var footer = TestUtils.renderIntoDocument(<Footer/>);
-    var footerNode = ReactDOM.findDOMNode(footer);
+describe('Footer', () => {
+  it('should be a footer', () => {
+    const footer = TestUtils.renderIntoDocument(<Footer/>);
+    const footerNode = ReactDOM.findDOMNode(footer);
     expect(footerNode.tagName).toEqual('FOOTER');
   });
 });

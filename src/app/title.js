@@ -1,12 +1,12 @@
-var React = require('react');
+import React, {Component} from 'react';
 
-var styles = {
+const styles = {
   title: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     padding: '1rem',
-    backgroundColor: '#cf4646',
+    backgroundColor: 'green',
     color: 'white'
   },
   h1: {
@@ -27,17 +27,13 @@ var styles = {
   }
 };
 
-module.exports = React.createClass({
-  render: function () {
+export class Title extends Component {
+  render() {
     return (
       <div style={styles.title}>
-        <h1 style={styles.h1}>Willkommen</h1>
-        <div>
-          <img style={styles.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/200px-Borussia_Dortmund_logo.svg.png"/>
-          <img style={styles.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Logo_FC_Bayern_M%C3%BCnchen.svg/200px-Logo_FC_Bayern_M%C3%BCnchen.svg.png"/>
-        </div>
-        <h2 style={styles.h2}>Always a pleasure scaffolding your apps.</h2>
+        <h1 style={styles.h1}>TuttiFooty</h1>
+        <h2 style={styles.h2}>Be the best!</h2>
       </div>
     );
   }
-});
+}
