@@ -3,6 +3,7 @@ import {Header} from './header';
 import {Title} from './title';
 import {Home} from './home';
 import {Teams} from './teams';
+import {Team} from './team';
 import {Footer} from './footer';
 import {
   BrowserRouter as Router,
@@ -35,7 +36,8 @@ export class Main extends Component {
         <Router history={browserHistory}>
         <div>
           <Route exact path="/" component={Home}/>
-          <Route path="/teams" component={Teams}/>
+          <Route exact path="/teams" component={Teams}/>
+          <Route path="/teams/:teamid" component={Team}/>
         </div>
       </Router>
         </main>
