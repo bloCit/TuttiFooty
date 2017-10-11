@@ -2,21 +2,22 @@ import React, {Component} from 'react';
 import {Header} from './header';
 import {Title} from './title';
 import {Home} from './home';
-import {About} from './about';
-import {Techs} from './techs/techs';
+import {Teams} from './teams';
 import {Footer} from './footer';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
-
+import {browserHistory} from 'react-router';
 
 const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100%'
+    minHeight: '100%',
+    marginLeft: '50px',
+    marginRight: '50px'
   },
   main: {
     flex: 1,
@@ -31,17 +32,10 @@ export class Main extends Component {
       <div style={styles.container}>
         <Header/>
         <main style={styles.main}>
-        <Router>
+        <Router history={browserHistory}>
         <div>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-    
-          <hr/>
-    
           <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
+          <Route path="/teams" component={Teams}/>
         </div>
       </Router>
         </main>

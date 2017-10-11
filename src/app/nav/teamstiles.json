@@ -1,0 +1,20 @@
+[
+    {"key": "FCB","title": "FC Bayern München"},
+    {"key": "RBL","title": "RB Leipzig"},
+    {"key": "BVB","title": "Borussia Dortmund", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/560px-Borussia_Dortmund_logo.svg.png"},
+    {"key": "TSG","title": "1899 Hoffenheim"},
+    {"key": "KOE","title": "1. FC Köln"},
+    {"key": "BSC","title": "Hertha BSC"},
+    {"key": "SCF","title": "SC Freiburg"},
+    {"key": "SVW","title": "Werder Bremen"},
+    {"key": "BMG","title": "Borussia Mönchengladbach"},
+    {"key": "S04","title": "Schalke 04"},
+    {"key": "SGE","title": "Eintracht Frankfurt"},
+    {"key": "B04","title": "Bayer Leverkusen"},
+    {"key": "FCA","title": "FC Augsburg"},
+    {"key": "HSV","title": "Hamburger SV"},
+    {"key": "M05","title": "FSV Mainz 05"},
+    {"key": "WOB","title": "VfL Wolfsburg"},
+    {"key": "VFB","title": "VfB Stuttgart"},
+    {"key": "H96","title": "Hannover 96"}
+]

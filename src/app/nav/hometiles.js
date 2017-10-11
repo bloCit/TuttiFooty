@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import {Tech} from './tech';
+import {NavTile} from './navtile';
 
 const styles = {
   container: {
@@ -19,17 +19,17 @@ const styles = {
   }
 };
 
-export class Techs extends Component {
+export class HomeTiles extends Component {
   constructor() {
     super();
-    this.state = {techs: []};
+    this.state = {tiles: []};
   }
 
   componentDidMount() {
     axios
-      .get('app/techs/techs.json')
+      .get('app/nav/hometiles.json')
       .then(response => {
-        this.setState({techs: response.data});
+        this.setState({tiles: response.data});
       });
   }
 
@@ -37,8 +37,8 @@ export class Techs extends Component {
     return (
       <div style={styles.container}>
         <div style={styles.techs}>
-          {this.state.techs.map((tech, i) => (
-            <Tech key={i} tech={tech}/>
+          {this.state.tiles.map((tile, i) => (
+            <NavTile key={i} tile={tile}/>
           ))}
         </div>
       </div>
