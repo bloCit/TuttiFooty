@@ -27,7 +27,7 @@ export class TeamsTiles extends Component {
 
   componentDidMount() {
     axios
-      .get('app/nav/teamstiles.json')
+      .get('https://www.openligadb.de/api/getavailableteams/bl1/2017')
       .then(response => {
         this.setState({tiles: response.data});
       });

@@ -50,13 +50,13 @@ export class TeamTile extends Component {
     return (
       
     //Geht bestimmt auch besser...
-      <Link to={window.location.pathname + "/" + this.props.tile.key}>
+      <Link to={window.location.pathname + "/" + this.props.tile.TeamId}>
         <div className='tech' style={styles.tech}>
         {/* <img style={renderImageTag(this)}/> */}
           <h3 style={styles.h3}>
-            {this.props.tile.title}
+            {this.props.tile.TeamName}
           </h3>
-          <h4 style={styles.h4}>({this.props.tile.key})</h4>
+          <h4 style={styles.h4}>({this.props.tile.TeamId})</h4>
         </div>
       </Link>
     );
