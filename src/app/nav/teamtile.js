@@ -12,9 +12,8 @@ const styles = {
     position: 'relative'
   },
   logo: {
-    width: '100%',
-    height: '100%',
-    position:'relative'
+    float: 'right',
+    margin: '0 0 .5rem .5rem'
   },
   h3: {
     fontSize: '1.5rem',
@@ -32,18 +31,26 @@ const styles = {
 };
 
 //Abchecken ob Logo hinterlegt ist
+// function renderImageTag(_el){
+//   var divStyle = {};
+//   if(!!_el.props.tile.TeamIconUrl && _el.props.tile.TeamIconUrl != ""){
+//      divStyle = {
+//       backgroundImage: 'url(' + _el.props.tile.TeamIconUrl + ')',
+//       width: '100%',
+//       height: '100%',
+//       backgroundSize: 'contain'
+//     }
+//   }
+//   return divStyle
+// }
+
+// function renderImageTag(_el){
 function renderImageTag(_el){
   var divStyle = {};
-  if(!!_el.props.tile.logo && _el.props.tile.logo != ""){
-     divStyle = {
-      backgroundImage: 'url(' + _el.props.tile.logo + ')',
-      width: '100%',
-      height: '100%',
-      backgroundSize: 'contain'
-    }
+  if(!!_el.props.tile.TeamIconUrl && _el.props.tile.TeamIconUrl != ""){
+    return <img style={styles.logo} src={_el.props.tile.TeamIconUrl}/>;
   }
-  return divStyle
-}
+     }
 
 export class TeamTile extends Component {
   render() {
@@ -52,6 +59,7 @@ export class TeamTile extends Component {
     //Geht bestimmt auch besser...
       <Link to={window.location.pathname + "/" + this.props.tile.TeamId}>
         <div className='tech' style={styles.tech}>
+          {renderImageTag(this)}
         {/* <img style={renderImageTag(this)}/> */}
           <h3 style={styles.h3}>
             {this.props.tile.TeamName}
