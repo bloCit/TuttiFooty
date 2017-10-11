@@ -1,4 +1,10 @@
 import React, {Component} from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+import {About} from '../about';
 
 const styles = {
   tech: {
@@ -21,17 +27,34 @@ const styles = {
   }
 };
 
+
+
+
 export class Tech extends Component {
   render() {
     return (
+     
+      <Router>
+      <Link to="/about">
       <div className='tech' style={styles.tech}>
+        
         <img style={styles.logo} src={this.props.tech.logo}/>
         <h3 style={styles.h3}>
           {this.props.tech.title}
         </h3>
         <p>{this.props.tech.text1}</p>
         <p>{this.props.tech.text2}</p>
+       
+        
       </div>
+      
+      <div>
+        <Route path="/about" component={About}/>
+      </div>
+      </Link>
+      
+      </Router>
+     
     );
   }
 }
