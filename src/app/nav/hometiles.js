@@ -35,7 +35,7 @@ export class HomeTiles extends Component {
 
   render() {
     return (
-      <div style={styles.container}>
+      <div className='row' style={styles.container}>
         <div style={styles.techs}>
           {this.state.tiles.map((tile, i) => (
             <NavTile key={i} tile={tile}/>

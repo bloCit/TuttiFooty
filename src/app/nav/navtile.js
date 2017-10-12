@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 
 const styles = {
   tech: {
-    height: '15rem',
-    width: '15rem',
+    height: '100%',
+    width: '100%',
     border: '1px solid lightgray',
     borderRadius: '1rem',
     margin: '1rem',
@@ -31,7 +31,7 @@ function renderImageTag(_el){
 
 function renderIconTag(_el){
   if(!!_el.props.tile.icon && _el.props.tile.icon != ""){
-    return <i className={'fa ' + _el.props.tile.icon + ' fa-2x'}></i>;
+    return <i className={'fa ' + _el.props.tile.icon + ' fa-4x'}></i>;
   }
 }
 
@@ -54,13 +54,13 @@ function renderText(_el){
 export class NavTile extends Component {
   render() {
     return (
-      <Link to={this.props.tile.key}>
+      <Link className='col-md-3' to={this.props.tile.key}>
         <div className='tech' style={styles.tech}>
         {renderImageTag(this)}
-          <h3 style={styles.h3}>
+          {/* <h3 style={styles.h3}>
             {this.props.tile.title}
-          </h3>
-          <h1 className='text-center'>{renderIconTag(this)}</h1>
+          </h3> */}
+          <h1 title={this.props.tile.title} className='text-center'>{renderIconTag(this)}</h1>
         </div>
       </Link>
     );

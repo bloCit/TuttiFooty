@@ -16,7 +16,6 @@ export class Main extends Component {
   render() {
     return (
       <div style={{height: '100%'}}>
-        <Header/>
         <main>
         <Router history={browserHistory}>
         <div>
