@@ -28,7 +28,7 @@ export class Header extends Component {
         
         </p>
         <p style={styles.date}>
-          Developed from genius guys
+        
         </p>
       </header>
     );

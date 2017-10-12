@@ -14,10 +14,7 @@ export class Footer extends Component {
   render() {
     return (
       <footer style={styles.footer}>
-        Build with ♥ by the&nbsp;
-        <a href="https://github.com/orgs/FountainJS/people">
-          FountainJS team
-        </a>
+        Build with ♥ by the&nbsp;genius guys.
       </footer>
     );
   }
