@@ -29,6 +29,12 @@ function renderImageTag(_el){
   }
 }
 
+function renderIconTag(_el){
+  if(!!_el.props.tile.icon && _el.props.tile.icon != ""){
+    return <i className={'fa ' + _el.props.tile.icon + ' fa-2x'}></i>;
+  }
+}
+
 //Abchecken ob Texte gesetzt
 function renderText(_el){
   var result;
@@ -54,7 +60,7 @@ export class NavTile extends Component {
           <h3 style={styles.h3}>
             {this.props.tile.title}
           </h3>
-          {renderText(this)}
+          <h1 className='text-center'>{renderIconTag(this)}</h1>
         </div>
       </Link>
     );

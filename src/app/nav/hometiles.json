@@ -1,16 +1,18 @@
 [
   {
-    "key": "/",
-    "title": "Home",
-    "logo": "",
-    "text1": "",
-    "text2": ""
+  "key": "/spieltage",
+  "title": "Spieltage",
+  "logo": "",
+  "text1": "",
+  "text2": "",
+  "icon": "fa-calendar"
   },
   {
     "key": "/teams",
     "title": "Mannschaften",
     "logo": "",
     "text1": "",
-    "text2": ""
+    "text2": "",
+    "icon": ""
   }
 ]

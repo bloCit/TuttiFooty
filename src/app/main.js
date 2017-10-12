@@ -12,27 +12,12 @@ import {
 } from 'react-router-dom'
 import {browserHistory} from 'react-router';
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100%',
-    marginLeft: '50px',
-    marginRight: '50px'
-  },
-  main: {
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column'
-  }
-};
-
 export class Main extends Component {
   render() {
     return (
-      <div style={styles.container}>
+      <div style={{height: '100%'}}>
         <Header/>
-        <main style={styles.main}>
+        <main>
         <Router history={browserHistory}>
         <div>
           <Route exact path="/" component={Home}/>
@@ -41,7 +26,6 @@ export class Main extends Component {
         </div>
       </Router>
         </main>
-        <Footer/>
       </div>
     );
   }
