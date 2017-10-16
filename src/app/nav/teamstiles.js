@@ -22,7 +22,7 @@ const styles = {
 export class TeamsTiles extends Component {
   constructor() {
     super();
-    this.state = {tiles: []};
+    this.state = {tiles: {standings:[{groups:[{team_standings:[]}]}]}};
   }
 
   componentDidMount() {
@@ -32,14 +32,13 @@ export class TeamsTiles extends Component {
     //     this.setState({tiles: response.data});
     //   });
     dataAPI.getTeams(this, "tiles");
-    dataAPI.getTransfermarkt();
   }
 
   render() {
     return (
       <div style={styles.container}>
         <div style={styles.techs}>
-          {this.state.tiles.map((tile, i) => (
+          {this.state.tiles.standings[0].groups[0].team_standings.map((tile, i) => (
             <TeamTile key={i} tile={tile}/>
           ))}
         </div>

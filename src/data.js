@@ -1,18 +1,19 @@
 var dataAPI = new function (){
     // https://github.com/OpenLigaDB/OpenLigaDB-Samples
-    this.baseURL = "https://www.openligadb.de/api/";
-    this.leagueId = "/bl1";
+    this.apiKey = "api_key=wpf3pxpf5dkjfarwd3rgwc2e"
     this.getTeams = function(_this, _propName){
         axios
-        .get(this.baseURL + "getavailableteams" + this.leagueId + "/2017")
+        .get("https://api.sportradar.us/soccer-t3/eu/de/tournaments/sr:tournament:35/standings.json?" + this.apiKey)
         .then(response => {
             if(_this){
                 //return state for componentDidMount
                 var obj = {};
                 obj[_propName] = response.data;
+                console.log(response.data);
                 return _this.setState(obj);
             }else{
                 //return only data
+                console.log(response.data);
                 return response.data;
             }
         })

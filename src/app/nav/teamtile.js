@@ -57,14 +57,14 @@ export class TeamTile extends Component {
     return (
       
     //Geht bestimmt auch besser...
-      <Link to={window.location.pathname + "/" + this.props.tile.TeamId}>
+      <Link to={window.location.pathname + "/" + this.props.tile.team.id}>
         <div className='tech' style={styles.tech}>
           {renderImageTag(this)}
         {/* <img style={renderImageTag(this)}/> */}
           <h3 style={styles.h3}>
-            {this.props.tile.TeamName}
+            {this.props.tile.team.name}
           </h3>
-          <h4 style={styles.h4}>({this.props.tile.TeamId})</h4>
+          <h4 style={styles.h4}>({this.props.tile.win + "/" + this.props.tile.draw + "/" + this.props.tile.loss})</h4>
         </div>
       </Link>
     );
