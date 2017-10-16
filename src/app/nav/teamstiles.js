@@ -31,7 +31,8 @@ export class TeamsTiles extends Component {
     //   .then(response => {
     //     this.setState({tiles: response.data});
     //   });
-    dataAPI.getCurrentMatchDay(this, "tiles");
+    dataAPI.getTeams(this, "tiles");
+    dataAPI.getTransfermarkt();
   }
 
   render() {

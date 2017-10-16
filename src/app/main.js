@@ -5,6 +5,7 @@ import {Home} from './home';
 import {Teams} from './teams';
 import {Team} from './team';
 import {Footer} from './footer';
+import {Spieltage} from './spieltage';
 import {
   BrowserRouter as Router,
   Route,
@@ -21,6 +22,7 @@ export class Main extends Component {
         <div>
           <Route exact path="/" component={Home}/>
           <Route exact path="/teams" component={Teams}/>
+          <Route exact path="/spieltage" component={Spieltage}/>
           <Route path="/teams/:teamid" component={Team}/>
         </div>
       </Router>
